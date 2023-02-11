@@ -8,5 +8,5 @@ authors = ["nuked44 <nuked44@gmail.com>"]
 
 [dependencies]
 bracket-lib = { git = "https://github.com/amethyst/bracket-lib.git" }
-specs = "0.16.1"
+specs = "0.17"
 specs-derive = "0.4.1"
