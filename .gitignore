@@ -1,4 +1,5 @@
-/target
-/resources
 /.vscode
+/resources
+/target
+/wasm
 Cargo.lock

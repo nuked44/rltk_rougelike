@@ -148,9 +148,9 @@ fn main() -> BError {
         .build()?;
     let mut gs = State { ecs: World::new() };
     gs.ecs.register::<Position>();
-    gs.ecs.register::<Renderable>();;
+    gs.ecs.register::<Renderable>();
     gs.ecs.register::<Player>();
-    
+
     gs.ecs.insert(new_map());
 
     gs.ecs
