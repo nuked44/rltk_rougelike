@@ -119,7 +119,6 @@ pub fn draw_map(ecs: &World, ctx: &mut BTerm) {
     let mut x = 0;
     let mut y = 0;
     for (idx, tile) in map.tiles.iter().enumerate() {
-
         if map.revealed_tiles[idx] {
             let glyph;
             let mut fg;
@@ -127,13 +126,15 @@ pub fn draw_map(ecs: &World, ctx: &mut BTerm) {
                 TileType::Floor => {
                     glyph = to_cp437('.');
                     fg = RGB::from_f32(0., 0.5, 0.5);
-                },
+                }
                 TileType::Wall => {
                     glyph = to_cp437('#');
                     fg = RGB::from_f32(0., 1., 0.);
-                },
+                }
             }
-            if !map.visible_tiles[idx] { fg = fg.to_greyscale() }
+            if !map.visible_tiles[idx] {
+                fg = fg.to_greyscale()
+            }
             ctx.set(x, y, fg, RGB::from_f32(0., 0., 0.), glyph);
         }
 
